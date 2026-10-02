@@ -1,0 +1,26 @@
+# Dependencies
+/node_modules/
+
+# Next.js output
+/.next/
+/out/
+/build/
+/dist/
+/next-env.d.ts
+*.tsbuildinfo
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+/.vercel/
+*.pem
+*.key
+
+# Logs and local files
+*.log
+.DS_Store
+Thumbs.db
+/coverage/
+/playwright-report/
+/test-results/
