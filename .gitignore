@@ -1,5 +1,12 @@
 # Dependencies
 /node_modules/
+**/node_modules/
+/.cache/
+**/.expo/
+**/dist/
+**/web-build/
+**/test-results/
+**/playwright-report/
 
 # Next.js output
 /.next/
