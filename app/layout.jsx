@@ -1,28 +1,40 @@
-import { Inter, Inconsolata, JetBrains_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import { site } from '@/lib/site';
 
-const inter = Inter({
+/* Fonts are self-hosted from app/fonts rather than fetched from Google at
+   build time. next/font/google downloads on every cold build and aborts on
+   a slow connection, which silently swaps in a fallback face and changes the
+   typography. These are the same variable woff2 files Google serves, so the
+   rendering is identical — but the build no longer needs the network. */
+
+const inter = localFont({
+  src: './fonts/Inter-latin.woff2',
+  weight: '100 900',
+  style: 'normal',
   variable: '--font-inter',
-  weight: ['100', '400', '700', '900'],
   display: 'swap',
-  subsets: ['latin'],
+  fallback: ['system-ui', 'Segoe UI', 'Arial', 'sans-serif'],
 });
 
-const interTight = Inconsolata({
+const interTight = localFont({
+  src: './fonts/InterTight-latin.woff2',
+  weight: '100 900',
+  style: 'normal',
   variable: '--font-inter-tight',
-  weight: ['400', '700'],
   display: 'swap',
-  subsets: ['latin'],
+  fallback: ['system-ui', 'Segoe UI', 'Arial', 'sans-serif'],
 });
 
-const jetbrains = JetBrains_Mono({
+const jetbrains = localFont({
+  src: './fonts/JetBrainsMono-latin.woff2',
+  weight: '100 800',
+  style: 'normal',
   variable: '--font-jetbrains',
-  weight: ['100', '400', '700', '800'],
   display: 'swap',
-  subsets: ['latin'],
+  fallback: ['ui-monospace', 'Consolas', 'monospace'],
 });
 
 export const metadata = {

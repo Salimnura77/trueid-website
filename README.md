@@ -1,19 +1,5 @@
 # TrueID.me
 
-## React Native pilot app
-
-The Expo / React Native / TypeScript pilot lives in [`mobile/`](mobile/README.md).
-It adapts the design in `TrueIDDigitalIdentityApp/` and includes sample identity
-verification, consent, credential reuse, partner results, revocation, and support.
-
-```sh
-cd mobile
-npm ci
-npm start
-```
-
-The documentation below describes the separate Next.js marketing website.
-
 Public website for a proposed Nigerian digital identity platform: verify once,
 receive a reusable credential, and share identity attributes with consent.
 
